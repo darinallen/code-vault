@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link type="text/css" rel="stylesheet" href="acousticode.css"/>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+        <title>Code Vault: CSS</title>
+        <script src="acousticode.js"></script>
+    </head>
+    <body>
+        <div class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>About</li>
+                <li>Glossary</li>
+                <li>Resources</li>
+            </ul>
+        </div>
+        <div class="header">
+            <img src="images/css3_header.png"/>
+            <div class="container">
+                <h1>CSS</h1>
+                    <p>All the latest styles.</p>
+            </div>
+        </div>
+
+        <!--Notes-->
+
+        <div class="overview">
+            <h2>Overview</h2>
+                <p>CSS is used to customize the style and presentation of websites. This includes fonts and colors, but it also applies to the layout and positioning of HTML elements on the page.</p>
+        </div>
+
+        <div class="notes">
+            <h2>Classes, IDs, and other Selectors</h2>
+                <ul>
+                    <li>* will select all HTML elements in a file.</li>
+
+                    <li>You can reach an element that is a child of another element by: div div p { /* Some CSS */ }</li>
+
+                    <li>If you want to reach direct children only, you can do that by: div div > p { /* Some CSS */ }</li>
+
+                    <li>CSS gives priority to more specific selectors. A specific selector will override a general selector.</li>
+
+                    <li>Class: A selector you use when a bunch of elements across a variety of selectors that should all receive the same styling.</li>
+
+                    <li>id: A selector to use when you want to specifically style a single html element.</li>
+
+                    <li>span: A selector that allows you to style one stretch of text or part of an element (I think).</li>
+
+                    <li>text-decoration: Can change the look of links in ‘a’ elements.</li>
+
+                    <li>pseudo-selectors: These allow you to set the styling for elements that may not be indicated in the HTML. For example, a link that is visited vs unvisited vs hovered. These selectors take the form of:
+
+                        <blockquote><code>selector: pseudo-class_selector {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;property: value;<br>
+                               }</code></blockquote>
+
+                        <blockquote><code>a:hover {<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: #cc0000;<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-weight: bold;<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-decoration: none;<br>
+                        }</blockquote></code></li>
+
+                    <li>a:link: an unvisited link</li>
+
+                    <li>a:visited: a visited link</li>
+
+                    <li>a:hover: A link you’re hovering over with your mouse</li>
+
+                    <li>first-child: A pseudo-class that applies styling only to the elements that are the first children of their parents.</li>
+
+                    <li>nth-child(x): Same thing, but with the nth child, specified with a number for x.</li>
+
+                    <li>body :nth-child(4) means “find the 4th child of body.</li>
+
+                    <li>body:nth-child(4), without the space, means “find the body tag that is a 4th child.</li>
+
+                    <li>You can resize an image with height and width selectors, and you can make it into a circle with a border-radius of 100%.</li>
+                </ul>
+
+        <h2>Positioning</h2>
+                <ul>
+                    <li>Elements populate the page in what’s known as the CSS Box Model.</li>
+
+                    <li>By default, all HTML elements take up the full width of the page. You can change this with the display property.</li>
+
+                    <li>display {
+                        <ul>
+                            <li>block: This makes the element a block box. It won’t let anything sit next to it on the page. It takes up the full width.</li>
+                            <li>inline-block: This makes the element a block box, but will allow other elements to sit next to it on the same line.</li>
+                            <li>inline: This makes the element sit on the same line as another element, but without formatting it like a block (e.g. it won’t keep width/height dimensions). It only takes up as much width as it needs to (not the whole line). This parameter is better suited for HTML elements that are blocks by default, such as headers and paragraphs.</li>
+                            <li>none: This makes the element and its content disappear from the page entirely.</li>
+                        </ul>
+                    </li>
+
+                    <br>
+
+                    <figure>
+                        <figcaption>CSS Box Model</figcaption>
+                        <img class="visual_aid" src="https://s3.amazonaws.com/codecademy-blog/assets/ae09140c.png"/>
+                    </figure>
+
+                    <li>margin: The space around an element. You can adjust the margin to move HTML elements closer or farther away from one another.
+                        <ul>
+                            <li>auto: Automatically puts equal left and right margins on an element, centering it on the page.</li>
+                            <li>margin-top, margin-bottom, margin-left, and margin-right add margin to those areas. You can also set these margins all at once, starting at top and going in clockwise order to right, then bottom, then left. e.g. “margin: 1px 2px 3px 4px;”</li>
+                        </ul>
+                    </li>
+
+                    <li>border: The edge of the element. Can be structured as “border: 2px dashed #FF0000;”</li>
+
+                    <li>padding: The spacing between the content and the border. When you give CSS a positive padding or margin value, it puts that space between the element and its reference. You can give padding a negative value, which will move the element in the other direction.</li>
+
+                    <li>content: The actual “stuff” in the box. Example: for a &lt;p&gt; element, the “stuff” is the text of the paragraph.</li>
+
+                    <br>
+
+                    <li>float: Puts an element in the flow of other elements, so floating elements won’t stack on top of one another.</li>
+
+                    <li>clear: Tells an element to clear the other elements on the page. clear: left will immediately move below any floating elements on the left side of the page. clear: right will do the same on the right side. clear: both will get out of the way of elements on the left and right. This works well for footers that need to be placed at the bottom of the page below other elements.</li>
+
+                    <li>position: static: The default positioning if you do not specify otherwise.</li>
+
+                    <li>position: absolute: Positions the element in relation to the first parent element that doesn’t have position: static. If there is no such element, the element with position: absolute gets positioned relative to &lt;html&gt;.</li>
+
+                    <li>position: relative: Tells the element to move relative to where it would have landed if it just had the default static positioning.</li>
+
+                    <li>position: fixed: Anchors an element to the browser window.</li>
+
+                    <li>z-index: A measure of importance. The higher an element’s z-index, the higher it will be stacked on the page. A z-index of 1 when no other elements have a z-index will ensure the element sits on top of other elements and won’t get covered up.</li>
+
+                    <li>CSS now have behavior with features like :hover and animations. It also have structure with pseudo-elements ::before and ::after.</li>
+            </ul>
+
+        </div>
+
+        <div id="footer">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>About</li>
+                <li>Glossary</li>
+                <li>Resources</li>
+            </ul>
+        </div>
+
+    </body>
+</html>
