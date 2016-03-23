@@ -3,23 +3,23 @@ body {
   color: #2D2E2E;
 }
 
-.nav {
+nav {
   margin-bottom: -14px;
 }
 
-.nav li {
+nav li {
   display: inline-block;
   margin-right: 10px;
 }
 
-.nav a {
+nav a {
   text-decoration: none;
 }
 
-.nav a:link    { color: #c00 }
-.nav a:visited { color: #0c0 }
-.nav a:hover   { color: #00c }
-.nav a:active  { color: #ccc }
+nav a:link    { color: #c00 }
+nav a:visited { color: #0c0 }
+nav a:hover   { color: #00c }
+nav a:active  { color: #ccc }
 
 .jumbotron {
   height: 350px;
@@ -53,27 +53,27 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-.header {
+header {
   height: 350px;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #4E4E4E;
 }
 
-.header .container {
+header .container {
   position: relative;
   top:90px;
   left: 50px;
 }
 
-.header img {
+header img {
   float: right;
   margin-top: 50px;
   margin-right: 50px;
   height: 250px;
 }
 
-.header h1 {
+header h1 {
   color: #fff;
   font-size: 4em;
   font-family: 'Open Sans', sans-serif;
@@ -81,7 +81,7 @@ body {
   margin-bottom: 10px;
 }
 
-.header p {
+header p {
   font-size: 1.5em;
   color: #fff;
   font-family: Open Sans, sans-serif;
@@ -160,7 +160,7 @@ figcaption {
   font-family: 'Open Sans Bold', sans-serif;
 }
 
-#footer {
+footer {
   background-color: #3F4F54;
   width: 100%;
   text-align: center;
@@ -169,7 +169,7 @@ figcaption {
   line-height: 150px;
 }
 
-#footer li {
+footer li {
   font-size: 1.5em;
   font-family: 'Open Sans', sans-serif;
   display: inline-block;
@@ -177,11 +177,11 @@ figcaption {
   color: white;
 }
 
-#footer a {
+footer a {
     text-decoration: none;
 }
 
-#footer a:link    { color: #c00 }
-#footer a:visited { color: #0c0 }
-#footer a:hover   { color: #00c }
-#footer a:active  { color: #ccc }
+footer a:link    { color: #c00 }
+footer a:visited { color: #0c0 }
+footer a:hover   { color: #00c }
+footer a:active  { color: #ccc }
